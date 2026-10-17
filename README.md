@@ -1,0 +1,1 @@
+# starscope-celebrity-website
