@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarScope | Global Celebrity News</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#111114;color:#f7f4f8;font-family:Arial,sans-serif}
+header{padding:25px 7%;border-bottom:1px solid #39343d}
+.logo{font-size:35px;font-weight:900;letter-spacing:-2px}
+.logo span{color:#ed3975}
+header p{color:#bbb;font-size:13px}
+nav{display:flex;gap:22px;flex-wrap:wrap;margin-top:25px}
+a{color:inherit;text-decoration:none}
+nav a:hover{color:#ed3975}
+main{max-width:1150px;margin:auto;padding:28px 20px}
+.hero{padding:55px 35px;border-radius:18px;background:linear-gradient(120deg,#512044,#b63567,#f18b60);margin-bottom:38px}
+.hero small{letter-spacing:2px}
+.hero h1{font-size:clamp(35px,6vw,65px);margin:18px 0}
+.hero p{line-height:1.7;max-width:600px}
+h2{margin-top:35px}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}
+button{cursor:pointer;border:1px solid #48404c;border-radius:25px;padding:10px 16px;background:#242128;color:white}
+button:hover,button.active{background:#ed3975;border-color:#ed3975}
+.search{width:100%;padding:14px;border-radius:10px;border:1px solid #48404c;background:#201e24;color:white;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:#201e24;border:1px solid #39343d;border-radius:15px;overflow:hidden}
+.art{height:150px;display:grid;place-items:center;font-size:25px;font-weight:900;letter-spacing:2px;background:linear-gradient(135deg,#7c2d59,#ef9264)}
+.card:nth-child(3n+2) .art{background:linear-gradient(135deg,#255d69,#9b83bd)}
+.card:nth-child(3n) .art{background:linear-gradient(135deg,#554080,#d45b69)}
+.content{padding:18px}
+.tag{font-size:11px;color:#ff8cb3;text-transform:uppercase;letter-spacing:1px}
+.content p{color:#bbb;font-size:14px;line-height:1.6}
+footer{padding:30px 7%;border-top:1px solid #39343d;color:#bbb;font-size:13px;margin-top:40px}
+@media(max-width:500px){header{padding:22px 5%}.hero{padding:30px 22px}nav{gap:14px}}
+</style>
+</head>
+<body>
+<header>
+<a href="#" class="logo">STAR<span>SCOPE</span></a>
+<p>THE WORLD OF FAME, IN FOCUS</p>
+<nav>
+<a href="#home">HOME</a>
+<a href="#stories" data-filter="Hollywood">HOLLYWOOD</a>
+<a href="#stories" data-filter="Music">MUSIC</a>
+<a href="#edits">CELEB EDITS</a>
+<a href="#stories" data-filter="Style">STYLE</a>
+</nav>
+</header>
+<main id="home">
+<section class="hero">
+<small>✦ YOUR FRONT ROW SEAT TO FAME</small>
+<h1>Fame moves fast.<br>Stay in the know.</h1>
+<p>Discover international celebrities, entertainment stories, music icons, unforgettable red-carpet looks and creative fan edits.</p>
+<a href="#stories"><button>Explore stories ↓</button></a>
+</section>
+
+<h2>Latest Celebrity Stories</h2>
+<p style="color:#bbb">Explore the people and moments shaping global entertainment.</p>
+<input class="search" id="search" placeholder="Search celebrities, music, movies..." aria-label="Search stories">
+<div class="filters" id="filters">
+<button class="active" data-filter="All">All stories</button>
+<button data-filter="Hollywood">Hollywood</button>
+<button data-filter="Music">Music</button>
+<button data-filter="Style">Style</button>
+<button data-filter="Culture">Pop culture</button>
+</div>
+<section class="grid" id="stories">
+<article class="card" data-cat="Hollywood"><div class="art">HOLLYWOOD</div><div class="content"><span class="tag">Hollywood</span><h3>What Makes a Movie Star Iconic?</h3><p>Explore performances, memorable roles and the craft behind global film fame.</p></div></article>
+<article class="card" data-cat="Music"><div class="art">MUSIC ICONS</div><div class="content"><span class="tag">Music</span><h3>When Music Takes Over the World</h3><p>Discover how artists, concerts and fan communities create unforgettable moments.</p></div></article>
+<article class="card" data-cat="Style"><div class="art">RED CARPET</div><div class="content"><span class="tag">Style</span><h3>Looks That Make Headlines</h3><p>Explore celebrity fashion, standout outfits and the designers behind them.</p></div></article>
+<article class="card" data-cat="Culture"><div class="art">POP CULTURE</div><div class="content"><span class="tag">Pop culture</span><h3>How a Moment Goes Viral</h3><p>Understand how online communities turn entertainment moments into trends.</p></div></article>
+<article class="card" data-cat="Hollywood"><div class="art">ON SCREEN</div><div class="content"><span class="tag">Hollywood</span><h3>From Breakout Role to Stardom</h3><p>Tell the story of an actor's career with original research and commentary.</p></div></article>
+<article class="card" data-cat="Music"><div class="art">NEW ERA</div><div class="content"><span class="tag">Music</span><h3>The Evolution of a Music Icon</h3><p>Explore changing sounds, creative eras and artistic reinvention.</p></div></article>
+</section>
+
+<section id="edits">
+<h2>Celebrity Edits & Iconic Moments</h2>
+<p style="color:#bbb;line-height:1.7">A space for your original celebrity edits, cinematic montages, concert highlights and fashion compilations. Add only media you own or are authorised to use.</p>
+<div class="grid">
+<article class="card"><div class="art">CINEMA CUT</div><div class="content"><span class="tag">Film & TV</span><h3>The Cinematic Edit</h3><p>Add your original film-inspired edit here.</p></div></article>
+<article class="card"><div class="art">POP ICON</div><div class="content"><span class="tag">Music</span><h3>On-Stage Energy</h3><p>Add your authorised music performance edit here.</p></div></article>
+<article class="card"><div class="art">ICONIC LOOK</div><div class="content"><span class="tag">Fashion</span><h3>Red Carpet Moments</h3><p>Add your fashion commentary and authorised visuals.</p></div></article>
+</div>
+</section>
+</main>
+<footer>
+<strong>STARSCOPE</strong> — Independent global entertainment magazine concept.
+<p>Contact: hello@starscope.example</p>
+<p>Publish original, fact-checked stories and respect copyright.</p>
+</footer>
+<script>
+let category="All";
+const cards=[...document.querySelectorAll("#stories .card")];
+function filterStories(){
+ const q=document.getElementById("search").value.toLowerCase();
+ cards.forEach(card=>{
+  card.style.display=(category==="All"||card.dataset.cat===category)&&card.innerText.toLowerCase().includes(q)?"":"none";
+ });
+}
+document.querySelectorAll("#filters button").forEach(button=>{
+ button.addEventListener("click",()=>{
+  category=button.dataset.filter;
+  document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("active",b===button));
+  filterStories();
+ });
+});
+document.getElementById("search").addEventListener("input",filterStories);
+document.querySelectorAll("nav [data-filter]").forEach(link=>{
+ link.addEventListener("click",()=>{
+  category=link.dataset.filter;
+  document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("active",b.dataset.filter===category));
+  filterStories();
+ });
+});
+</script>
+</body>
+</html>
