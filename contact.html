@@ -1,0 +1,88 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | StarScope</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background: #111114;
+      color: #f5f3f7;
+      line-height: 1.7;
+    }
+    main {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #1b1b20;
+      border-radius: 16px;
+    }
+    h1 { color: #d92f67; }
+    a { color: #ff8b57; }
+    label { display: block; margin-top: 15px; }
+    input, textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      background: #111114;
+      color: white;
+    }
+    button {
+      margin-top: 18px;
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 8px;
+      background: #d92f67;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Contact StarScope</h1>
+    <p>
+      Have a question, suggestion, correction, or business inquiry?
+      We welcome feedback about our entertainment content.
+    </p>
+
+    <h2>Get in touch</h2>
+    <p>
+      Email: <strong>your-email@example.com</strong>
+    </p>
+    <p>
+      Replace the example email above with an email address you can access.
+    </p>
+
+    <h2>Send us a message</h2>
+    <form action="mailto:your-email@example.com"
+          method="post" enctype="text/plain">
+      <label for="name">Your name</label>
+      <input id="name" name="Name" required>
+
+      <label for="email">Your email</label>
+      <input id="email" name="Email" type="email" required>
+
+      <label for="message">Your message</label>
+      <textarea id="message" name="Message"
+                rows="5" required></textarea>
+
+      <button type="submit">Send message</button>
+    </form>
+
+    <p><a href="index.html">← Back to StarScope home</a></p>
+    <p>
+      <a href="about.html">About Us</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+  </main>
+</body>
+</html>
+```
